@@ -43,13 +43,23 @@ function App() {
         <form className="wrapper" onSubmit={handleSubmit(onSubmit)}>
           <h1>Contact Us</h1>
           <div className="row name">
-            <div className="first-name">
+            <div className="first-name col">
               <label htmlFor="">first name</label>
-              <input id="firstName" {...register("firstName")} type="text" />
+              <input
+                required
+                id="firstName"
+                {...register("firstName")}
+                type="text"
+              />
             </div>
-            <div>
+            <div className="last-name col">
               <label htmlFor="">last name</label>
-              <input id="lastName" {...register("lastName")} type="text" />
+              <input
+                required
+                id="lastName"
+                {...register("lastName")}
+                type="text"
+              />
             </div>
           </div>
           <div className="col email">
@@ -62,6 +72,7 @@ function App() {
               <div className="row query-inputs">
                 <label className="radio-label">
                   <input
+                    required
                     id="generalEnquiry"
                     {...register("queryType")}
                     type="radio"
@@ -72,6 +83,7 @@ function App() {
                 </label>
                 <label className="radio-label">
                   <input
+                    required
                     id="supportRequest"
                     {...register("queryType")}
                     type="radio"
@@ -86,6 +98,7 @@ function App() {
           <div className="col">
             <label htmlFor="">Message *</label>
             <input
+              required
               id="message"
               {...register("message")}
               className="message-input"
@@ -94,7 +107,12 @@ function App() {
           </div>
           <div className="row">
             <label className="consent-checkbox">
-              <input id="consent" {...register("consent")} type="checkbox" />
+              <input
+                required
+                id="consent"
+                {...register("consent")}
+                type="checkbox"
+              />
               <p>I consest to being contacted by the team</p>
             </label>
           </div>
