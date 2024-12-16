@@ -1,0 +1,209 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+main,
+body,
+#root {
+  height: 100vh;
+  background-color: #e3f0e8;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  /* border: 2px solid dodgerblue; */
+
+  background: #ffffff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 5rem;
+  max-height: 80%;
+  max-width: 80%;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.wrapper {
+  /* border: 2px solid red; */
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.wrapper h1 {
+  font-size: 1.5rem;
+  color: #22322f;
+}
+
+label {
+  color: #7f8788;
+  font-weight: 400;
+}
+
+input {
+  border-radius: 5px;
+  border: 2px solid #dadede;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.query-inputs {
+  width: 100%;
+  display: flex;
+}
+input:hover {
+  border: 2px solid #889b98;
+  outline: none;
+}
+input:focus {
+  border: 2px solid #889b98;
+  outline: none;
+}
+
+.name input:hover {
+  border: 2px solid #889b98;
+}
+.name input:focus {
+  outline: none;
+  border: 2px solid #889b98;
+}
+
+.query-inputs input:nth-child(2) {
+}
+
+.submit {
+  font-size: 0.9rem;
+  color: white;
+  border-radius: 5px;
+  background-color: #377a6c;
+  border: 2px solid #377a6c;
+  padding: 0.25rem 0.5rem;
+}
+
+.message-input {
+  height: 4rem;
+}
+
+.query {
+  /* border: 2px solid dodgerblue; */
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.query label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #d7dbdb;
+  border-radius: 5px;
+  margin-top: 0.2em;
+  padding: 0.2em;
+}
+
+.query label:nth-child(1) {
+  padding-left: 1em;
+  width: 49%;
+}
+.query label:hover {
+  background-color: #e3f0e7;
+  border: 2px solid #819c93;
+}
+
+.query label:nth-child(2) {
+  margin-left: auto;
+  width: 49%;
+  /* padding-right: 3em; */
+}
+
+.query .placeholder {
+  padding-left: 0.2em;
+}
+
+.consent-checkbox {
+  display: flex; /* Use flexbox for proper alignment */
+  align-items: center; /* Vertically align items */
+  gap: 0.5rem; /* Add space between the checkbox and the text */
+  cursor: pointer; /* Make it clear the label is clickable */
+}
+
+.consent-checkbox p {
+  margin: 0; /* Remove default margin */
+  font-size: 0.9rem; /* Adjust the font size if needed */
+  display: inline; /* Make it inline */
+}
